@@ -28,35 +28,35 @@ else
     }
 }
 
-/* int number;
+//int number;
+//
+// while (true) (пока ввод не будет корректным, цикл будет запрашивать ввод корректного введения)
+// {
+// Console.WriteLine("Номер четверти");
+// number = int.Parse(Console.ReadLine()!);
+// if (number < 1 || number > 4)
+// {
+// Console.WriteLine("Некорректный ввод. Повторите попытку");
+// }
+// else
+// {
+// break;
+// }
+// }
 
-while (true) (пока ввод не будет корректным, цикл будет запрашивать ввод корректного введения)
-{
-Console.WriteLine("Номер четверти");
-number = int.Parse(Console.ReadLine()!);
-if (number < 1 || number > 4)
-{
-Console.WriteLine("Некорректный ввод. Повторите попытку");
-}
-else
-{
-break;
-}
-}
-
-if (number == 1)
-{
-Console.WriteLine("x > 0, y > 0");
-}
-else if (number == 2)
-{
-Console.WriteLine("x < 0, y > 0");
-}
-else if (number == 3)
-{
-Console.WriteLine("x < 0, y < 0");
-}
-else if (number == 4)
-{
-Console.WriteLine("x > 0, y < 0");
-}/
+// if (number == 1)
+// {
+// Console.WriteLine("x > 0, y > 0");
+// }
+// else if (number == 2)
+// {
+// Console.WriteLine("x < 0, y > 0");
+// }
+// else if (number == 3)
+// {
+// Console.WriteLine("x < 0, y < 0");
+// }
+// else if (number == 4)
+// {
+// Console.WriteLine("x > 0, y < 0");
+// }

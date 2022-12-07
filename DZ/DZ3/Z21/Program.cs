@@ -17,4 +17,5 @@ int By = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Bz=");
 int Bz = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine(Math.Sqrt(Math.Pow((Bx - Ax),2) + Math.Pow((By - Ay),2) + Math.Pow((Bz - Az),2)));
+double dist = Math.Sqrt(Math.Pow(Bx - Ax,2) + Math.Pow(By - Ay,2) + Math.Pow(Bz - Az,2));
+Console.WriteLine(dist);

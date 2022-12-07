@@ -4,12 +4,42 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine();
-string num=Console.ReadLine()!;
+// Console.WriteLine("Введите пятизначное число ");
+// string num=Console.ReadLine()!;
 
-if (num.Length == 5)
+// if (num.Length == 5)
+// {
+//     if (num[0] == num[4] && num[1] == num[3]) Console.WriteLine("да");
+//     else Console.WriteLine("нет");
+// }
+// else Console.WriteLine("Введите пятизначное число ");
+
+Console.WriteLine("Введите пятизначное число ");
+int num = int.Parse(Console.ReadLine()!);
+
+if (num < 0)
 {
-    if (num[0] == num[4] && num[1] == num[3]) Console.WriteLine("да");
-    else Console.WriteLine("нет");
+    num = -num;
 }
-else Console.WriteLine("Валера...");
+
+if (num < 10000 || num > 100000)
+{
+    Console.WriteLine("Введите пятизначное число ");
+}
+else
+{
+    int firstdigit = num / 10000;
+    int seconddigit = (num / 1000) % 10;
+    int fourthdigit = (num / 10) % 10;
+    int fifthdigit = num % 10;
+
+    if (firstdigit == fifthdigit && seconddigit == fourthdigit)
+    {
+        Console.WriteLine("да ");
+    }
+    else
+    {
+        Console.WriteLine("нет ");
+    }
+}
+
