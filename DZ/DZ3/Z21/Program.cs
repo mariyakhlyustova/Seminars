@@ -18,4 +18,4 @@ Console.WriteLine("Bz=");
 int Bz = int.Parse(Console.ReadLine()!);
 
 double dist = Math.Sqrt(Math.Pow(Bx - Ax,2) + Math.Pow(By - Ay,2) + Math.Pow(Bz - Az,2));
-Console.WriteLine(dist);
+Console.WriteLine(Math.Round(dist, 2));

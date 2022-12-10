@@ -3,19 +3,19 @@
 // [1,0,1,1,0,1,0,0]
 
 
-void FillArray()
+void FillArray(int[] array)
 {
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        arr[i] = new Random().Next(0, 2);
+        array[i] = new Random().Next(0, 2);
     }
 }
 
 void PrintArray(int[] array)
 {
-   for (int i = 0; i < arr.Length; i++)
+   for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{arr[i]} ");
+        Console.Write($"{array[i]} ");
     }
 }
 
