@@ -8,7 +8,7 @@ Console.WriteLine();
 string n_1 = Console.ReadLine()!;
 int n_1_n = int.Parse(n_1);
 Console.WriteLine();
-string n_2 = Console.ReadLine();
+string n_2 = Console.ReadLine()!;
 int n_2_n = int.Parse(n_2);
 int max = n_1_n;
 if (n_2_n > max) max = n_2_n;

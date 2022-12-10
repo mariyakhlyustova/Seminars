@@ -5,7 +5,7 @@
 // 7 -> нет
 
 Console.WriteLine();
-string n = Console.ReadLine();
+string n = Console.ReadLine()!;
 int n_n = int.Parse(n);
 if (n_n % 2 == 0)
 {
