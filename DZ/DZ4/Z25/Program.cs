@@ -4,16 +4,20 @@
 // 2, 4 -> 16
 
 Console.WriteLine("A= ");
-int A = int.Parse(Console.ReadLine()!);
+int numA = int.Parse(Console.ReadLine()!);
 Console.WriteLine("B= ");
-int B = int.Parse(Console.ReadLine()!);
+int numB = int.Parse(Console.ReadLine()!);
 
-// Console.WriteLine(Math.Pow(A, B));
+// 1 способ через функцию Math.Pow(), по рекомендации на семинаре.
 
-int AB = A;
-for (int i = 1; i < B; i++)
-{
-    AB = AB * A;
-}
+Console.WriteLine(Math.Pow(numA, numB));
 
-Console.WriteLine(AB);
+
+// 2 способ через цикл как указано в условии задачи.
+
+// int expAinB = numA;
+// for (int i = 1; i < numB; i++)
+// {
+//     expAinB = expAinB * numA;
+// }
+// Console.WriteLine(expAinB);
