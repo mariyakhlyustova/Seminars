@@ -4,26 +4,30 @@
 // количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int[] array = new int[4];
+Console.WriteLine("Введите длину массива");
+int num = int.Parse(Console.ReadLine()!);
 
-FillArray(array);
-PrintArray(array);
+int minvalue = 100;
+int maxvalue = 999;
+int[] arr = FillArray(num, minvalue, maxvalue);
 
-int evenFunc = EvenNumber(array);
-Console.WriteLine($" -> {evenFunc}");
+PrintArray(arr);
+Console.WriteLine($" -> {EvenNumber(arr)}");
 
 
-void FillArray(int[] array)
+int[] FillArray(int n, int min, int max)
 {
+    int[] array = new int[n];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(100, 1000);
+        array[i] = new Random().Next(min, max + 1);
     }
+    return array;
 }
 
 void PrintArray(int[] array)
 {
-   for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         Console.Write($"{array[i]} ");
     }
@@ -32,12 +36,12 @@ void PrintArray(int[] array)
 int EvenNumber(int[] array)
 {
     int count = 0;
-        for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
         {
-            if (array[i] % 2 == 0)
-            {
-                count += 1;
-            }
+            count += 1;
         }
+    }
     return count;
 }

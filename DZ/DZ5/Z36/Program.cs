@@ -4,21 +4,27 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int[] array = new int[4];
+Console.WriteLine("Введите длину массива");
+int num = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите минимальное значение");
+int minvalue = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите максимальное значение");
+int maxvalue = int.Parse(Console.ReadLine()!);
 
-FillArray(array);
-PrintArray(array);
-
-int sumFunc = SumOddPos(array);
-Console.WriteLine($" -> {sumFunc}");
+int[] arr = FillArray(num, minvalue, maxvalue);
+PrintArray(arr);
+Console.WriteLine($" -> {SumOddPos(arr)}");
 
 
-void FillArray(int[] array)
+
+int[] FillArray(int n, int min, int max)
 {
+    int[] array = new int[n];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(-100, 100);
+        array[i] = new Random().Next(min, max + 1);
     }
+    return array;
 }
 
 void PrintArray(int[] array)
@@ -32,7 +38,7 @@ void PrintArray(int[] array)
 int SumOddPos(int[] array)
 {
     int sum = 0;
-        for (int i = 0; i < array.Length; i += 2)
+        for (int i = 1; i < array.Length; i += 2)
         {
             sum += array[i];
         }
